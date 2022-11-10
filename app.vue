@@ -9,7 +9,7 @@ useHead({
 
 <template>
   <div>
-    <BrannerAlert/>
+    <!-- <BrannerAlert/> -->
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

@@ -2,7 +2,7 @@
 <script setup>
 const cateGory = await $fetch("https://dummyjson.com/products/categories");
 const ProductList = await $fetch(
-  "https://dummyjson.com/products?limit=10&skip=10"
+  "https://dummyjson.com/products?limit=100&skip=1"
 );
 </script>
 
@@ -41,19 +41,19 @@ const ProductList = await $fetch(
       </div>
     </section>
     <section>
-      <div>
-        <h1>ສິນຄ້າທັງໝົດ</h1>
+      <div class="flex justify-scpace-between">
+        <h1 class="text-xl leading-7 font-medium py-3">ສິນຄ້າທັງໝົດ</h1>
+        <a href="#" class="text-md leading-7 font-medium py-3">view More</a>
       </div>
       <!-- {{ ProductList }} -->
       <div class="grid grid-cols-7 gap-2">
         <ProductCard
           v-for="(pt, i) in ProductList.products"
+          :attr="pt"
           :key="i"
-          :title="pt.title"
-          :price="pt.price"
-          :thumail="pt.thumbnail"
         />
       </div>
+      <button>Load More</button>
     </section>
     <!-- <section>
       <div class="px-2">

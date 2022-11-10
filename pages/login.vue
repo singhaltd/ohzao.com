@@ -1,3 +1,8 @@
+<script setup>
+definePageMeta({
+  layout: "log-in",
+});
+</script>
 <template>
   <div>
     <div
@@ -32,7 +37,7 @@
         class="flex-col flex self-center lg:px-14 sm:max-w-4xl xl:max-w-md z-10"
       >
         <div class="self-start hidden lg:flex flex-col text-gray-300">
-          <h1 class="my-3 font-semibold text-4xl">Welcome back</h1>
+          <h1 class="my-3 font-semibold text-4xl">OHZAO</h1>
           <p class="pr-3 text-sm opacity-75">
             Lorem ipsum is placeholder text commonly used in the graphic, print,
             and publishing industries for previewing layouts and visual mockups
@@ -45,8 +50,8 @@
             <h3 class="font-semibold text-2xl text-gray-800">Sign In</h3>
             <p class="text-gray-400">
               Don'thave an account?
-              <a href="#" class="text-sm text-purple-700 hover:text-purple-700"
-                >Sign Up</a
+              <NuxtLink to="signup" class="text-sm text-purple-700 hover:text-purple-700"
+                >Sign Up</NuxtLink
               >
             </p>
           </div>
@@ -195,10 +200,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style>
-</style>
